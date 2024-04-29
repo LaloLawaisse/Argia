@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="600.0" style="-fx-background-color: #EEEEEE;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DecipherController">
+   <bottom>
+      <AnchorPane prefHeight="106.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="decipherButton" layoutX="376.0" layoutY="41.0" mnemonicParsing="false" onAction="#decipherButtonOnAction" prefHeight="25.0" prefWidth="89.0" text="Desencriptar" />
+            <Button fx:id="exitButton" layoutX="136.0" layoutY="41.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="25.0" prefWidth="89.0" text="Salir" />
+         </children></AnchorPane>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="171.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="75.0" layoutY="48.0" text="Origen">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="73.0" layoutY="127.0" text="Destino">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <TextField fx:id="originField" editable="false" layoutX="143.0" layoutY="45.0" prefHeight="25.0" prefWidth="290.0" promptText="Ingrese directorio de origen" />
+            <TextField fx:id="destinationField" editable="false" layoutX="143.0" layoutY="124.0" prefHeight="25.0" prefWidth="290.0" promptText="Ingrese directorio de destino" />
+            <Button fx:id="originButton" layoutX="456.0" layoutY="45.0" mnemonicParsing="false" onAction="#originButtonOnAction" text="Examinar..." />
+            <Button fx:id="destinationButton" layoutX="456.0" layoutY="124.0" mnemonicParsing="false" onAction="#destinationButtonOnAction" text="Examinar..." />
+            <CheckBox fx:id="replaceCheckbox" layoutX="143.0" layoutY="86.0" mnemonicParsing="false" onAction="#replaceCheckBoxOnAction" prefHeight="19.0" prefWidth="169.0" text="Reemplazar en el lugar">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="deleteOriginCheckbox" layoutX="320.0" layoutY="87.0" mnemonicParsing="false" text="Eliminar archivos origen" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane opacity="0.49" prefHeight="239.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="progressTextArea" layoutX="72.0" layoutY="10.0" prefHeight="203.0" prefWidth="459.0" />
+            <ProgressBar fx:id="progressBar" layoutX="136.0" layoutY="236.0" prefHeight="18.0" prefWidth="330.0" progress="0.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
